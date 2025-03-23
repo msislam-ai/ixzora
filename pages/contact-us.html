@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4f8db6233a.js" crossorigin="anonymous"></script>
+    <title>IXROS - Building Digital Success</title>
+</head>
+<body class="bg-white text-gray-900">
+    <div>
+        <!-- navigation-bar -->
+        <div>
+            <nav class="bg-white flex justify-between items-center px-6 py-4 shadow-md">
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-btn" class="md:hidden text-gray-900 text-3xl">
+                    ☰
+                </button>
+
+                <!-- Brand (Centered) -->
+                <h1 class="text-gray-900 text-3xl absolute left-1/2 transform -translate-x-1/2 font-semibold">Ixzora</h1>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="/pages/contact-us.html" class="text-gray-900 hover:text-blue-600">Contact</a></li>
+                    <li><a href="/pages/service.html" class="text-gray-900 hover:text-blue-600">Services</a></li>
+                    <li><a href="/index.html" class="text-gray-900 hover:text-blue-600">Home</a></li>
+                </ul>
+
+                <!-- Login Button (Hidden on Mobile) -->
+                <button class="hidden md:block w-20 h-10 border-2 border-blue-500 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600">Log In</button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden flex flex-col items-center space-y-4 bg-white py-6 md:hidden">
+                <a href="#" class="text-gray-900 hover:text-blue-600">Contact</a>
+                <a href="#" class="text-gray-900 hover:text-blue-600">Services</a>
+                <a href="/index.html" class="text-gray-900 hover:text-blue-600">Home</a>
+                <a href="/pages/log-in.html" class="w-20 h-10 flex items-center justify-center border-2 border-blue-500 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600">Log In</a>
+            </div>
+
+            <!-- JavaScript for Mobile Menu -->
+            <script>
+                // Add an event listener for the menu button
+                document.getElementById("menu-btn").addEventListener("click", function () {
+                    // Get the mobile menu
+                    var menu = document.getElementById("mobile-menu");
+                    // Toggle the 'hidden' class to show/hide the menu
+                    menu.classList.toggle("hidden");
+                });
+            </script>
+        </div>
+
+        <!-- hero-section -->
+        <div class="flex items-center justify-center w-screen h-screen bg-blue-100 gap-8 p-4">
+            <!-- left-section -->
+            <div class="w-[40%] h-[80%] bg-white rounded-3xl shadow-lg flex flex-col gap-6">
+                <!-- text -->
+                <div class="w-full h-[30%] bg-blue-500 text-white flex items-center justify-center rounded-t-3xl">
+                    <h2 class="text-3xl font-semibold">Let's Chat, Reach Out to Us</h2>
+                </div>
+                <!-- form -->
+                <section class="min-h[100%] flex items-center justify-center bg-gray-50">
+                    <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Contact Us</h2>
+            
+                        <!-- Contact Form -->
+                        <form action="#" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" id="name" name="name" class="mt-2 p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Your Full Name" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" class="mt-2 p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Your Email Address" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="5" class="mt-2 p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <!-- right-section -->
+            <div class="w-[30%] h-[80%] bg-gray-200 rounded-3xl shadow-lg">
+                <!-- pic -->
+                <div class="w-full h-[70%] bg-cover bg-center rounded-t-3xl" style="background-image: url('/src/images/woman-working-call-center-talking-with-clients-using-headphones-microphone.jpg');"></div>
+                <!-- contact -->
+                <div class="w-full h-[30%] bg-blue-500 text-white rounded-b-3xl mt-1 p-4 flex flex-col gap-4">
+                    <!-- mail -->
+                    <div class="flex items-center bg-white p-3 rounded-lg shadow-md">
+                        <div class="w-10 h-10 flex items-center justify-center bg-blue-500 rounded-full text-white text-xl"><i class="fa-solid fa-envelope"></i></div>
+                        <p class="flex flex-col ml-3">
+                            <span class="text-lg font-semibold text-black">Email:</span>
+                            <span class="text-md text-black">ixzora@service.gmail.com</span>
+                        </p>
+                    </div>
+                    <!-- phone -->
+                    <div class="flex items-center bg-white p-3 rounded-lg shadow-md">
+                        <div class="w-10 h-10 flex items-center justify-center bg-blue-500 rounded-full text-white text-xl"><i class="fa-solid fa-phone"></i></div>
+                        <p class="flex flex-col ml-3">
+                            <span class="text-lg font-semibold text-black">Phone:</span>
+                            <span class="text-md text-black">+123 456 7890</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
